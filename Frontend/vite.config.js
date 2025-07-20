@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-   server: {
+  server: {
     proxy: {
       '/api': {
-        target: 'https://your-backend.onrender.com',
+        target: 'https://code-reviewer-5gik.onrender.com',
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
-})
+  },
+});
