@@ -25,7 +25,7 @@ const [review, setreview] = useState('')
   });
   
   async function reviewCode() {
-    const response = await axios.post('http://localhost:3000/ai/get-review', { code })
+    const response = await axios.post('https://code-reviewer-5gik.onrender.com/ai/get-review', { code })
 
     setreview(response.data)
   }
